@@ -4,7 +4,8 @@
 @import 'tweaks-temp';
 @import 'color-palette';
 
-$theme_default_color: if($variant == 'light', $grey-900, $grey-300);
+// $theme_default_color: if($variant == 'light', $grey-900, $grey-300); // .
+$theme_default_color: if($variant == 'light', $grey-900, #424647);
 $theme_purple_color:  if($variant == 'light', $purple-400, $purple-300);
 $theme_pink_color:    if($variant == 'light', $pink-400, $pink-300);
 $theme_red_color:     if($variant == 'light', $red-600, $red-500);
@@ -98,10 +99,14 @@ $theme_blue_color:    if($variant == 'light', #3684dd, #5294e2);
       @if ($type == 'h') { @return #404859; }
     }
   } @else {
-    @if ($type == 'a') { @return #FFFFFF; }
-    @if ($type == 'b') { @return #FAFAFA; }
-    @if ($type == 'c') { @return #F2F2F2; }
-    @if ($type == 'd') { @return #CCCCCC; }
+    @if ($type == 'a') { @return #fbf1c7; }
+    @if ($type == 'b') { @return #ebdbb2; }
+    @if ($type == 'c') { @return #d5c4a1; }
+    @if ($type == 'd') { @return #928374; }
+    // @if ($type == 'a') { @return #FFFFFF; }
+    // @if ($type == 'b') { @return #FAFAFA; }
+    // @if ($type == 'c') { @return #F2F2F2; }
+    // @if ($type == 'd') { @return #CCCCCC; }
 
     @if ($color_type == 'blackness') {
       @if ($type == 'e') { @return #000000; }
@@ -112,10 +117,14 @@ $theme_blue_color:    if($variant == 'light', #3684dd, #5294e2);
 
     @if ($color_type == 'default') {
       @if ($darker == 'true') {
-        @if ($type == 'e') { @return #0A0A0A; }
-        @if ($type == 'f') { @return #141414; }
-        @if ($type == 'g') { @return #1F1F1F; }
-        @if ($type == 'h') { @return #292929; }
+        @if ($type == 'e') { @return #000000; }
+        @if ($type == 'f') { @return #0d1011; }
+        @if ($type == 'g') { @return #161a1c; }
+        @if ($type == 'h') { @return #1d2021 }
+        // @if ($type == 'e') { @return #0A0A0A; }
+        // @if ($type == 'f') { @return #141414; }
+        // @if ($type == 'g') { @return #1F1F1F; }
+        // @if ($type == 'h') { @return #292929; }
       } @else {
         @if ($type == 'e') { @return #212121; }
         @if ($type == 'f') { @return #242424; }
@@ -140,13 +149,16 @@ $theme_blue_color:    if($variant == 'light', #3684dd, #5294e2);
 //
 
 $primary:                               theme(color);
-$drop_target_color:                     $deep-orange-400;
+// $drop_target_color:                     $deep-orange-400;
+$drop_target_color:                     #fe8019;
 $indicator:                             theme(color);
 $titlebar-indicator:                    if($variant == 'dark', currentColor, $primary);
 $inverse-indicator:                     if($theme == 'default', white, $primary);
 $applet-primary:                        if($topbar == 'dark' and $theme == 'default' and $variant == 'light', #DDDDDD, $primary);
-$titlebar-primary:                      if($topbar == 'dark' and $theme == 'default' and $variant == 'light', if($color_type == 'nord', #dbdee5, #e0e0e0), $primary);
-$osd-primary:                           if($theme == 'default', if($color_type == 'nord', #dbdee5, #e0e0e0), $primary);
+// $titlebar-primary:                      if($topbar == 'dark' and $theme == 'default' and $variant == 'light', if($color_type == 'nord', #dbdee5, #e0e0e0), $primary);
+$titlebar-primary:                      if($topbar == 'dark' and $theme == 'default' and $variant == 'light', if($color_type == 'nord', #dbdee5, #d5c4a1), $primary);
+// $osd-primary:                           if($theme == 'default', if($color_type == 'nord', #dbdee5, #e0e0e0), $primary);
+$osd-primary:                           if($theme == 'default', if($color_type == 'nord', #dbdee5, #d5c4a1), $primary);
 
 $background:                            if($variant == 'light', background(a), background(g));
 $surface:                               if($variant == 'light', background(a), background(h));
@@ -183,11 +195,15 @@ $entry:                                 on($background, fill);
 //
 
 $link:                                  $blue-500;
-$link-visited:                          if($variant == 'light', $purple-500, $purple-200);
+// $link-visited:                          if($variant == 'light', $purple-500, $purple-200);
+$link-visited:                          if($variant == 'light', $purple-500, "#d3869b");
 
-$warning:                               if($variant == 'light', #F4B400, #FDD633);
-$error:                                 if($variant == 'light', #D93025, #F28B82);
-$success:                               if($variant == 'light', #0F9D58, #81C995);
+$warning:                               if($variant == 'light', #F4B400, #fabd2f);
+$error:                                 if($variant == 'light', #D93025, #fb4934);
+$success:                               if($variant == 'light', #0F9D58, #b8bb26);
+// $warning:                               if($variant == 'light', #F4B400, #FDD633);
+// $error:                                 if($variant == 'light', #D93025, #F28B82);
+// $success:                               if($variant == 'light', #0F9D58, #81C995);
 
 $suggested:                             $primary;
 $destructive:                           $error;
