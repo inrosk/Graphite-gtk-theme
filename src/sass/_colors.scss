@@ -196,7 +196,7 @@ $entry:                                 on($background, fill);
 
 $link:                                  $blue-500;
 // $link-visited:                          if($variant == 'light', $purple-500, $purple-200);
-$link-visited:                          if($variant == 'light', $purple-500, "#d3869b");
+$link-visited:                          if($variant == 'light', $purple-500, #d3869b);
 
 $warning:                               if($variant == 'light', #F4B400, #fabd2f);
 $error:                                 if($variant == 'light', #D93025, #fb4934);
